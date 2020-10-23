@@ -1,0 +1,26 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Roboto);
+* {
+  font-family: roboto; }
+
+html,
+body {
+  all: unset;
+  height: 100%; }
+
+.container {
+  --columns: 5;
+  --rows: 5;
+  background-color: coral;
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr); }
+
+.cell {
+  background-color: darkred;
+  border: 1px solid #fae6ee; }
+
+.cell.live,
+.cell[state='1'] {
+  background-color: #fae6ee;
+  border: 1px solid darkred; }

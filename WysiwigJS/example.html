@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Wysiwig Example</title>
+	<link href="src/css/all.min.css" rel="stylesheet" />
+	<link href="src/css/test.css" rel="stylesheet" />
+	<link href="src/css/wysiwyg.css" rel="stylesheet" />
+	<link href="src/css/DragOld.css" rel="stylesheet" />
+	<script src="src/wysiwyg.js"></script>
+	<script src="src/Drag.js"></script>
+</head>
+<body>
+	<!--<div class="outerContainer dropzone">
+	</div>-->
+	<script type="text/javascript">
+		let containerCount = 6;
+
+		for (let i = 0; i < containerCount; i++)
+		{
+			let newContainer = document.createElement('div');
+			newContainer.classList.add('outerContainer');
+			newContainer.classList.add('dropzone');
+			document.body.appendChild(newContainer);
+		}
+
+		let containers = document.querySelectorAll('.outerContainer');
+
+		let bubbleCount = 300;
+
+		for (let i = 0; i < bubbleCount; i++)
+		{
+			let newBubble = document.createElement('div');
+			newBubble.classList.add('bubble');
+			newBubble.setAttribute('data-nr', (i + 1));
+
+			containers[i % containers.length].appendChild(newBubble);
+		}
+
+		new Drag(document.querySelectorAll('.bubble'), {
+			dropzone: 'dropzone'
+		});
+	</script>
+</body>
+</html>

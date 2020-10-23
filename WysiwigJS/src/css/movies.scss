@@ -1,0 +1,96 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Roboto);
+* {
+	font-family: roboto;
+}
+
+.resultTable {
+	border: 2px solid #999999;
+	border-collapse: collapse;
+}
+
+.resultTable .header th {
+	background-color: #696969;
+	color: #ffffff;
+	padding: 10px;
+}
+
+.resultTable td {
+	border-top: 1px solid #999999;
+	border-bottom: 1px solid #999999;
+	padding: 10px;
+}
+
+.resultTable tbody tr:nth-child(2n) {
+	background-color: rgba(120, 120, 120, 0.8);
+	color: #fff;
+}
+
+.resultTable tbody tr:nth-child(2n):hover {
+	background-color: rgba(120, 120, 120, 1.0);
+}
+
+
+.resultTable tbody tr:nth-child(2n + 1) {
+	background-color: rgba(211, 211, 211, 0.6);
+}
+
+.resultTable tbody tr:nth-child(2n + 1):hover {
+	background-color: rgba(211, 211, 211, 1.0);
+}
+
+.pager td {
+	text-align: center;
+}
+
+.pager td > div {
+	padding: 5px 10px;
+	display: inline-block;
+}
+.pager td > div:not(.pageNumber) {
+	cursor: pointer;
+	border: 1px solid transparent;
+}
+
+.pager td > div:not(.pageNumber):hover {
+	background-color: rgba(211, 211, 211, 0.7);
+	border: 1px solid rgba(211, 211, 211, 1.0);
+}
+
+.keywords ul {
+	margin: 0;
+	padding: 0;
+}
+
+.keywords li {
+	list-style: none;
+	padding: 5px 10px;
+	/*border: 1px solid #dcdcdc;*/
+	border-spacing: -10px;
+	margin-top: -1px;
+}
+
+.keywords li:nth-child(2n+1) {
+	background-color: rgba(230, 230, 230, 0.2);
+}
+
+.keywords li:nth-child(2n+1):hover {
+	background-color: rgba(230, 230, 230, 0.5);
+}
+
+.keywords li:nth-child(2n) {
+	background-color: rgba(250, 240, 240, 0.2);
+}
+
+.keywords li:nth-child(2n):hover {
+	background-color: rgba(250, 240, 240, 0.5);
+}
+
+
+.keywords li:first-child {
+	border-top-right-radius: 10px;
+}
+
+.keywords li:last-child {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}

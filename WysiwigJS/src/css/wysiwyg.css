@@ -1,0 +1,69 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Roboto);
+* {
+  font-family: Roboto; }
+
+.toolbar {
+  height: 30px; }
+
+.button {
+  color: #2F4F4F;
+  background-color: #efefef;
+  display: inline-block;
+  padding: 4px 7px;
+  font-size: 1.2em;
+  border: 2px solid;
+  border-color: #dddddd;
+  border-style: outset;
+  border-radius: 4px; }
+
+.button:active {
+  border-style: inset; }
+
+.button.active {
+  background-color: #C0C0C0; }
+
+.button button {
+  display: none; }
+
+select.button {
+  padding: 1px; }
+
+select.button:focus {
+  outline: none; }
+
+.separator {
+  display: inline-block;
+  width: 2px;
+  background-color: #2F4F4F;
+  height: 70%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 3px; }
+
+[contenteditable] {
+  border: 2px solid #2F4F4F;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 5px; }
+
+[type=color] {
+  border: none;
+  outline: none; }
+
+.colorButton input {
+  visibility: hidden;
+  width: 0;
+  padding: 0;
+  margin: 0;
+  height: 0;
+  position: absolute; }
+
+.backColor:before {
+  color: #2F4F4F; }
+
+.backColor {
+  color: #efefef;
+  box-shadow: 7px 4px 0px 0px #efefef inset, -7px -4px 0px 0px #efefef inset;
+  background-color: currentColor; }
+

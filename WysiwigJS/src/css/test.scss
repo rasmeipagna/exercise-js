@@ -1,0 +1,52 @@
+﻿$bubbleSize: 50px;
+$bubbleBorder: 2px;
+
+.outerContainer {
+	background-color: #f00;
+	width: $bubbleSize * 6;
+	min-height: $bubbleSize;
+	display: inline-block;
+	margin: 7px;
+}
+
+.bubble {
+	float: left;
+}
+
+.bubble::after {
+	width: $bubbleSize - $bubbleBorder * 2;
+	height: $bubbleSize - $bubbleBorder * 2;
+	content: attr(data-nr);
+	background-color: black;
+	border-radius: $bubbleSize;
+	color: #fff;
+	font-family: roboto;
+	font-size: 20px;
+	text-align: center;
+	line-height: $bubbleSize - $bubbleBorder * 2;
+	border: $bubbleBorder solid transparent;
+	display: block;
+}
+
+body {
+	user-select: none;
+}
+
+.dragged::after {
+	background-color: rgba(0, 0, 0, 0.2);
+	border-style: dashed;
+	border-color: rgba(0, 0, 0, 0.4);
+	color: rgba(0, 0, 0, 0.4);
+}
+
+.droppreview::after {
+	background-color: rgba(0, 0, 0, 0.4);
+	border-style: solid;
+	border-color: rgba(0, 0, 0, 0.6);
+}
+
+.dragpreview::after {
+	width: $bubbleSize / 2 - $bubbleBorder * 2;
+	height: $bubbleSize / 2 - $bubbleBorder * 2;
+	line-height: $bubbleSize / 2 - $bubbleBorder * 2;
+}

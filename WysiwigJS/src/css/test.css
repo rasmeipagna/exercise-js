@@ -1,0 +1,42 @@
+﻿.outerContainer {
+  background-color: #f00;
+  width: 300px;
+  min-height: 50px;
+  display: inline-block;
+  margin: 7px; }
+
+.bubble {
+  float: left; }
+
+.bubble::after {
+  width: 46px;
+  height: 46px;
+  content: attr(data-nr);
+  background-color: black;
+  border-radius: 50px;
+  color: #fff;
+  font-family: roboto;
+  font-size: 20px;
+  text-align: center;
+  line-height: 46px;
+  border: 2px solid transparent;
+  display: block; }
+
+body {
+  user-select: none; }
+
+.dragged::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-style: dashed;
+  border-color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.4); }
+
+.droppreview::after {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.6); }
+
+.dragpreview::after {
+  width: 21px;
+  height: 21px;
+  line-height: 21px; }

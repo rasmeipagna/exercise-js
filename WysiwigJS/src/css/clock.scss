@@ -1,0 +1,126 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+.clockcontainer
+{
+	position: relative;
+}
+
+.clock
+{
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border: 3px solid brown;
+	border-radius: 100%;
+}
+
+.topleft,
+.topright,
+.bottomleft,
+.bottomright
+{
+	background-color: wheat;
+	width: 50%;
+	height: 50%;
+	float: left;
+}
+
+.bottomleft,
+.topright
+{
+	background-color: lemonchiffon;
+}
+
+.topleft
+{
+	border-top-left-radius: 100%;
+}
+
+.topright {
+	border-top-right-radius: 100%;
+}
+
+.bottomleft {
+	border-bottom-left-radius: 100%;
+}
+
+.bottomright {
+	border-bottom-right-radius: 100%;
+}
+
+.clear
+{
+	clear: left;
+}
+
+.number {
+	display: inline-block;
+	font-size: 2em;
+	font-family: roboto;
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform-origin: bottom;
+	transform: translate(-50%, -50%) translate(-45px, -142px);
+}
+
+.number::after {
+	display: inline-block;
+	content: attr(data-number);
+}
+
+.hourhand,
+.minutehand,
+.secondhand {
+	display: inline-block;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	background-color: black;
+	transform-origin: bottom;
+	transition-property: all;
+	transition-duration: .1s;
+	transition-timing-function: ease;
+	border-radius: 30px;
+}
+
+.scale {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform-origin: bottom;
+}
+
+.scale > div {
+	background-color: black;
+}
+
+$buttonPaddingTop: 4px;
+$buttonPaddingLeft: 7px;
+
+.button {
+	color: brown;
+	background-color: wheat;
+	display: inline-block;
+	padding: $buttonPaddingTop $buttonPaddingLeft;
+	font-size: 2em;
+	border: 2px solid;
+	border-color: brown;
+	border-style: outset;
+	border-radius: 4px;
+}
+
+.button input
+{
+	display: none;
+}
+
+.button:active {
+	border-style: inset;
+}
+
+.button.active {
+	background-color: burlywood;
+}

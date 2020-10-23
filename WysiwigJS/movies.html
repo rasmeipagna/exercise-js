@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link href="src/css/all.min.css" rel="stylesheet" />
+	<link href="src/css/movies.css" rel="stylesheet" />
+	<script src="src/libs/d3.js"></script>
+	<script src="src/movies.js"></script>
+</head>
+<body>
+	<div class="chart"></div>
+	<script>
+		let movies = new MovieChart(document.querySelector(".chart"));
+
+		let list = new LinkedList();
+
+		list.push(0);
+		list.push(1);
+
+		console.log(list.pop());
+		console.log(list.pop());
+		console.log(list);
+	</script>
+</body>
+</html>

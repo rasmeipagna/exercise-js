@@ -1,0 +1,172 @@
+﻿$linecolor: palegreen;
+$linewidth: 24px;
+$lineheight: 4px;
+$endwidth: 2px;
+$margins: 1px;
+$background: black;
+$border : 7px;
+
+.number {
+	position: relative;
+	display: inline-block;
+	width: $linewidth + $endwidth * 2;
+	height: $linewidth * 2 + $lineheight + $margins * 4;
+	border: $border solid $background;
+	background-color: $background;
+}
+
+.line {
+	width: $linewidth - $endwidth * 2;
+	height: $lineheight;
+	margin: 0 $endwidth;
+	left: 50%;
+	transform: translateX(calc(-50% - #{$endwidth}));
+}
+
+.line.top {
+	top: 0;
+}
+
+.line.middle {
+	top: 50%;
+	transform: translate(calc(-50% - #{$endwidth}),-50%);
+}
+
+.line.bottom {
+	bottom: 0;
+}
+
+.line:before {
+	content: '';
+	display: block;
+	float: left;
+	border-top: ($lineheight / 2) solid transparent;
+	border-right: $endwidth solid $linecolor;
+	border-bottom: ($lineheight / 2) solid transparent;
+	margin-left: -$endwidth;
+}
+
+.line:after {
+	content: '';
+	display: block;
+	float: left;
+	border-top: ($lineheight / 2) solid transparent;
+	border-left: $endwidth solid $linecolor;
+	border-bottom: ($lineheight / 2) solid transparent;
+	margin-left: $linewidth - $endwidth * 2;
+}
+
+.vline {
+	width: $lineheight;
+	height: $linewidth - $endwidth * 2;
+	margin: $endwidth 0;
+}
+
+.vline:before {
+	content: '';
+	display: block;
+	float: left;
+	border-right: ($lineheight / 2) solid transparent;
+	border-bottom: $endwidth solid $linecolor;
+	border-left: ($lineheight / 2) solid transparent;
+	margin-top: -$endwidth;
+}
+
+.vline:after {
+	content: '';
+	display: block;
+	float: left;
+	border-right: ($lineheight / 2) solid transparent;
+	border-top: $endwidth solid $linecolor;
+	border-left: ($lineheight / 2) solid transparent;
+	margin-top: $linewidth - $endwidth * 2;
+}
+
+.vline.topleft {
+	left: 0;
+	top: $lineheight / 2 + $margins;
+}
+
+.vline.topright {
+	right: 0;
+	top: $lineheight / 2 + $margins;
+}
+
+.vline.bottomleft {
+	left: 0;
+	bottom: $lineheight / 2 + $margins;
+}
+
+.vline.bottomright {
+	right: 0;
+	bottom: $lineheight / 2 + $margins;
+}
+
+.line,
+.vline {
+	background-color: $linecolor;
+	position: absolute;
+	opacity: 0;
+}
+.line.active,
+.vline.active
+{
+	opacity: 1;
+}
+
+.separator {
+	width: ($linewidth + $endwidth * 2) / 2;
+	height: $linewidth * 2 + $lineheight + $margins * 4;
+	background-color: $background;
+	display: inline-block;
+	border: $border solid $background;
+	position: relative;
+}
+.separator::before,
+.separator::after {
+	content: '';
+	width: $endwidth * 2;
+	height: $endwidth * 2;
+	display: inline-block;
+	position: absolute;
+	background-color: palegreen;
+}
+.separator::before {
+	left: 50%;
+	top: 33%;
+	transform: translate(-50%, -50%);
+}
+.separator::after {
+	left: 50%;
+	top: 66%;
+	transform: translate(-50%, -50%);
+}
+
+
+
+$buttonPaddingTop: 4px;
+$buttonPaddingLeft: 7px;
+
+.button {
+	color: $background;
+	background-color: $linecolor;
+	display: inline-block;
+	padding: $buttonPaddingTop $buttonPaddingLeft;
+	font-size: 2em;
+	border: 2px solid;
+	border-color: $background;
+	border-style: outset;
+	border-radius: 4px;
+}
+
+.button input {
+	display: none;
+}
+
+.button:active {
+	border-style: inset;
+}
+
+.button.active {
+	background-color: forestgreen;
+}

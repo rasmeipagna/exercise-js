@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link href="src/css/all.min.css" rel="stylesheet" />
+	<link href="src/css/clock.css" rel="stylesheet" />
+	<script src="src/helper.js"></script>
+	<script src="src/clock.js"></script>
+</head>
+<body>
+	<script>
+		let clock = new Clock({
+			outerRad: 160,
+			innerRad: 120,
+			hourhand: {
+				height: 100
+			},
+			secondhand: {
+				width: 5
+			},
+			tickingnoiseseconds: {
+				enabled: true
+			}
+		});
+	</script>
+</body>
+</html>
